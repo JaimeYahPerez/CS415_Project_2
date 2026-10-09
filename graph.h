@@ -22,4 +22,5 @@ public:
     int getVertexCount() const;
 };
 
+Graph buildRentalGraph(const std::vector<Client>& clients);
 #endif
