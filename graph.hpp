@@ -2,6 +2,7 @@
 #define GRAPH_H
 
 #include <vector>
+#include "client.hpp"
 
 struct Edge {
     int destination;

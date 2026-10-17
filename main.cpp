@@ -2,9 +2,9 @@
 #include <string>
 #include <vector>
 
-#include "client.h"
-#include "fileio.h"
-#include "graph.h"
+#include "client.hpp"
+#include "fileio.hpp"
+#include "graph.hpp"
 
 int main()
 {
