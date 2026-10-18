@@ -11,7 +11,7 @@ $(TARGET): $(OBJS)
 main.o: main.cpp client.h fileio.hpp graph.hpp
 	$(CXX) $(CXXFLAGS) -c main.cpp
 
-fileio.o: fileio.cpp fileio.hpp client.h
+fileio.o: fileio.cpp fileio.hpp client.hpp
 	$(CXX) $(CXXFLAGS) -c fileio.cpp
 
 graph.o: graph.cpp graph.hpp client.h
