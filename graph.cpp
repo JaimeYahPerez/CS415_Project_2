@@ -1,7 +1,5 @@
 #include "graph.hpp"
 
-
-
 Graph::Graph(int numberOfVertices) {
     adjacencyList.resize(numberOfVertices);
 }
@@ -16,13 +14,12 @@ const std::vector<Edge>& Graph::getNeighbors(int vertex) const {
 }
 
 int Graph::getVertexCount() const {
-    return static_cast<int>(adjacencyList.size());
+    return adjacencyList.size();
 }
 
 
-Graph buildRentalGraph(const std::vector<Client>& clients)
-{
-    int n = static_cast<int>(clients.size());
+Graph buildRentalGraph(const std::vector<Client>& clients) {
+    int n = clients.size();
 
     int startVertex = 0;
     int endVertex = n + 1;
@@ -32,17 +29,13 @@ Graph buildRentalGraph(const std::vector<Client>& clients)
     std::vector<bool> hasIncoming(n + 1, false);
     std::vector<bool> hasOutgoing(n + 1, false);
 
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            if (i == j)
-            {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (i == j) {
                 continue;
             }
 
-            if (clients[i].end <= clients[j].start)
-            {
+            if (clients[i].end <= clients[j].start) {
                 int fromVertex = clients[i].id;
                 int toVertex = clients[j].id;
 
@@ -58,7 +51,6 @@ Graph buildRentalGraph(const std::vector<Client>& clients)
         }
     }
 
-    // Add START edges
     for (int i = 1; i <= n; i++)
     {
         if (!hasIncoming[i])
@@ -67,11 +59,8 @@ Graph buildRentalGraph(const std::vector<Client>& clients)
         }
     }
 
-    // Add END edges
-    for (int i = 1; i <= n; i++)
-    {
-        if (!hasOutgoing[i])
-        {
+    for (int i = 1; i <= n; i++) {
+        if (!hasOutgoing[i]) {
             graph.addEdge(
                 i,
                 endVertex,

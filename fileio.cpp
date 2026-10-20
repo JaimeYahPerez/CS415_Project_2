@@ -13,9 +13,9 @@ std::vector<Client> readClients(const std::string& filename) {
         return clients;
     }
 
-    int start;
-    int end;
-    int revenue;
+    int start = 0;
+    int end = 0;
+    int revenue = 0;
     int id = 1;
 
     while (inputFile >> start >> end >> revenue) {

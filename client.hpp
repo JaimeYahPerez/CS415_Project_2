@@ -1,9 +1,8 @@
 #pragma once
-#ifndef CLIENT_H
-#define CLIENT_H
+#ifndef client
+#define client
 
-struct Client
-{
+struct Client {
     int id;
     int start;
     int end;

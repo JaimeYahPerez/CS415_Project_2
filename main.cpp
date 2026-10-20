@@ -18,8 +18,7 @@ int main()
 
     std::vector<Client> clients = readClients("data/" + filename);
 
-    if (clients.empty())
-    {
+    if (clients.empty()) {
         std::cout << "No client data was loaded.\n";
         return 1;
     }
