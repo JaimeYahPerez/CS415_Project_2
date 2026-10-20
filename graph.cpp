@@ -51,10 +51,8 @@ Graph buildRentalGraph(const std::vector<Client>& clients) {
         }
     }
 
-    for (int i = 1; i <= n; i++)
-    {
-        if (!hasIncoming[i])
-        {
+    for (int i = 1; i <= n; i++) {
+        if (!hasIncoming[i]) {
             graph.addEdge(startVertex, i, 0);
         }
     }

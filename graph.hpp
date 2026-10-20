@@ -1,5 +1,5 @@
-#ifndef graph
-#define graph
+#ifndef GRAPH_HPP
+#define GRAPH_HPP
 
 #include <vector>
 #include "client.hpp"

@@ -1,6 +1,6 @@
 #pragma once
-#ifndef client
-#define client
+#ifndef CLIENT_HPP
+#define CLIENT_HPP
 
 struct Client {
     int id;

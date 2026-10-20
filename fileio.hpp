@@ -1,5 +1,5 @@
-#ifndef fileio
-#define fileio
+#ifndef FILEIO_HPP
+#define FILEIO_HPP
 
 #include <string>
 #include <vector>

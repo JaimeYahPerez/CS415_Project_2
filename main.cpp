@@ -29,15 +29,12 @@ int main()
 
     if (!outputFile.is_open())
     {
-        std::cerr << "Error: Could not open output file "
-                  << outputFilename << '\n';
+        std::cerr << "Error: Could not open output file " << outputFilename << '\n';
         return 1;
     }
 
     // Print client count to the terminal and output file.
-    std::string clientCount =
-        "\nThere are " + std::to_string(clients.size()) +
-        " clients in this file\n";
+    std::string clientCount = "\nThere are " + std::to_string(clients.size()) + " clients in this file\n";
 
     std::cout << clientCount << '\n';
     outputFile << clientCount << '\n';
