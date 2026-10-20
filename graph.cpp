@@ -1,15 +1,13 @@
-#include "graph.h"
+#include "graph.hpp"
+
+
 
 Graph::Graph(int numberOfVertices) {
     adjacencyList.resize(numberOfVertices);
 }
 
 void Graph::addEdge(int from, int to, int weight) {
-    Edge edge;
-
-    edge.destination = to;
-    edge.weight = weight;
-
+    Edge edge{ to, weight };
     adjacencyList[from].push_back(edge);
 }
 
